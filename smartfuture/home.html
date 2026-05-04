@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="home.css">
+<title>Dynamic Priority Scheduler</title>
+
+
+</head>
+
+<body>
+
+<div class="tech-grid"></div>
+<div class="circuits"></div>
+
+<div class="server s1"></div>
+<div class="server s2"></div>
+<div class="server s3"></div>
+
+<div class="cube c1">
+<div class="front"></div><div class="back"></div><div class="right"></div>
+<div class="left"></div><div class="top"></div><div class="bottom"></div>
+</div>
+
+<div class="cube c2">
+<div class="front"></div><div class="back"></div><div class="right"></div>
+<div class="left"></div><div class="top"></div><div class="bottom"></div>
+</div>
+
+<div class="binary b1">101010101010101</div>
+<div class="binary b2">110101001011010</div>
+<div class="binary b3">001101010101101</div>
+
+<div class="wrap">
+<div class="container" id="mainBox">
+
+<h1>⚡ Dynamic Priority Scheduler</h1>
+
+<div class="dashboard">
+
+<div class="card">
+<div class="inner">
+<div class="face front">
+<h3>Total Processes</h3>
+<p id="total">0</p>
+</div>
+<div class="face back">
+<h3>System</h3>
+<p>ONLINE</p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="inner">
+<div class="face front">
+<h3>Average CPU</h3>
+<p id="avg">0%</p>
+</div>
+<div class="face back">
+<h3>Load</h3>
+<p>SMART</p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="inner">
+<div class="face front">
+<h3>High Priority</h3>
+<p id="high">0</p>
+</div>
+<div class="face back">
+<h3>Speed</h3>
+<p>FAST</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="form-box">
+<input type="text" id="name" placeholder="Process Name">
+<input type="number" id="cpu" placeholder="CPU %">
+<button onclick="addProcess()">Add Process</button>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>CPU Usage</th>
+<th>Priority</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody id="tableBody"></tbody>
+</table>
+
+</div>
+</div>
+
+<script src="home.js"></script>
+
+</body>
+</html>
